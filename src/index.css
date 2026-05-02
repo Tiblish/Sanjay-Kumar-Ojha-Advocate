@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;700;900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-legal-dark: #0F2F2F;
+  --color-legal-gold: #B89648;
+  --color-legal-cream: #F8F7F4;
+}
+
+@layer base {
+  :root {
+    --font-serif: 'Lora', serif;
+    --font-sans: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  /* ⚖️ FIX: Scroll Margin for Navigation */
+  section[id] {
+    scroll-margin-top: 100px;
+  }
+
+  body {
+    @apply bg-legal-cream text-legal-dark font-sans;
+  }
+
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F7F4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0F2F2F;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B89648;
+}
